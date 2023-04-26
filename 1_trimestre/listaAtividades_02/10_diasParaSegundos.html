@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    PROBLEMA: Problema 10: Dias para segundos
+    Peça para o usuário informar uma data em dias com horas, minutos e segundos e retorne a data em segundos.
+    */
+
+    //ENTRADA
+    const data = prompt(`Qual data que deseja transformar em segundos vividos?`);
+
+    //PROCESSAMENTO
+    const dias = data.substr(0, 2);
+    const meses = data.substr(3, 2);
+    const anos = data.substr(6, 2);
+
+    const totalDias = (anos * 365) + (meses * 30) + dias;
+    const totalSegundos = totalDias * 86400;
+
+    //SAÍDA
+    document.write(`O total de segundos é ${totalSegundos}.`);
+</script>

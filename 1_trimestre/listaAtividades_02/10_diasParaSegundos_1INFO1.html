@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+<script>
+    //PROBLEMA
+    //Peça para o usuário informar uma data em dias com horas, minutos e segundos e retorne a data em segundos.
+
+    //ENTRADA
+    const data = prompt(`Informe uma data no formato dd/MM/aaaa:`).trim();
+    const hora = prompt(`Informe uma hora no formato HH:mm:ss:`).trim();
+
+    //PROCESSAMENTO
+    const dia = data.substr(0, 2) - 1;
+    const mes = data.substr(3, 2) - 1;
+    const ano = data.substr(6, 4) - 1;
+    const horas = hora.substr(0, 2);
+    const minutos = hora.substr(3, 2);
+    const segundos = hora.substr(6, 2);
+
+    const totalSegundos = (86400 * dia) + (86400 * 30 * mes) + (86400 * 30 * 12 * ano) + (horas * 3600) + (minutos * 60) + segundos;
+
+    //SAÍDA
+    document.write(`Já se passaram ${totalSegundos} segundos até o dia ${data} e hora ${hora}.`);
+</script>
