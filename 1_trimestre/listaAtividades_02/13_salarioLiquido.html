@@ -8,16 +8,12 @@
 
     //ENTRADA
     const horasMes = Number(prompt(`Quantas horas trabalha no mês?`));
-    const dinheiroHora = Number(prompt(`Quanto recebe por hora trabalhada?`));
+    const dinheiroHora = Number(prompt(`Quanto recebe por hora trabalhada?`).trim().replace(",", "."));
 
     //PROCESSAMENTO
-    const resultado1 = horasMes * dinheiroHora;
-    const inss = resultado1 * 0.08;
-    const ir = resultado1 * 0.11;
-    const x = resultado1 - inss - ir;
-
-    // const salarioFinal = (horasMes * dinheiroHora) * 0.81;
+    let salario = horasMes * dinheiroHora;
+    salario = salario - (salario * 19 / 100);
 
     //SAÍDA
-    document.write(`O salário líquido será de R$ ${x.toFixed(2).replace(".", ",")} por mês.`);
+    document.write(`O salário líquido será de R$ ${salario.toFixed(2).replace(".", ",")} por mês.`);
 </script>

@@ -1,0 +1,17 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    Problema: Diferença de idade
+    Peça para o usuário informar o seu ano de nascimento e o ano de nascimento do irmão mais velho. Após, o programa deverá apresentar uma mensagem especificando a diferença de idade entre os irmãos.
+    */
+
+    //ENTRADA
+    const anoNascimento = Number(prompt(`Qual o seu ano de nascimento?`).trim());
+    const anoIrmao = Number(prompt(`Qual o ano de nascimento do irmão mais velho?`).trim());
+
+    //PROCESSAMENTO
+    const diferencaIdade = anoNascimento - anoIrmao;
+
+    //SAÍDA
+    document.write(`A diferença de idade é de ${diferencaIdade} anos.`);
+</script>
