@@ -1,0 +1,9 @@
+[submodule "1_trimestre/avaliacoes/1INFO1/prova_1tri_1INFO1"]
+	path = 1_trimestre/avaliacoes/1INFO1/prova_1tri_1INFO1
+	url = https://github.com/ldmfabio/prova_1tri_1INFO1.git
+[submodule "1_trimestre/avaliacoes/prova_1tri_1INFO2"]
+	path = 1_trimestre/avaliacoes/prova_1tri_1INFO2
+	url = https://github.com/ldmfabio/prova_1tri_1INFO2.git
+[submodule "1_trimestre/avaliacoes/prova_1tri_1INFO3"]
+	path = 1_trimestre/avaliacoes/prova_1tri_1INFO3
+	url = https://github.com/ldmfabio/prova_1tri_1INFO3.git
