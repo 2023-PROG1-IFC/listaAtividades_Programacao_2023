@@ -1,0 +1,13 @@
+<script>
+    //Problema: Peça para o usuário informar um número e ele será dividido por cinco. Apresente o resultado formatando com duas casas após a vírgula.
+
+    //ENTRADA
+    const numero = Number(prompt(`Informe um número:`).trim());
+
+    //PROCESSAMENTO
+    const resultado = numero / 5;
+
+    //SAÍDA
+    alert(`O resultado é ${resultado.toFixed(2).replace(".", ",")}.`);
+    document.write(`O resultado é ${resultado.toFixed(2).replace(".", ",")}.`);
+</script>

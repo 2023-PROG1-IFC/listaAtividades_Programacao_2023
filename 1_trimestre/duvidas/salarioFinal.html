@@ -1,0 +1,15 @@
+<script>
+    //Problema: Peça para o usuário informar o seu salário atual e calcule um reajuste de 5,6%
+
+    //ENTRADA
+    let salario = Number(prompt(`Informe o seu salário atual:`).trim().replace(",", "."));
+
+    //PROCESSAMENTO
+    salario = salario + (salario * 5.6 / 100);
+    salario = salario + (salario * 0.056);
+    salario = salario * 1.056;
+
+    //SAÍDA
+    alert(`O salário final será de R$ ${salario.toFixed(2).replace(".", ",")}.`);
+    document.write(`O salário final será de R$ ${salario.toFixed(2).replace(".", ",")}.`);
+</script>

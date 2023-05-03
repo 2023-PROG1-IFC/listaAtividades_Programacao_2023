@@ -1,0 +1,14 @@
+<script>
+    //Problema: Peça para o usuário informar um número e divida ele por três. Apresente o resultado.
+
+    //ENTRADA
+    const numero = Number(prompt(`Informe um número:`).trim());
+
+    //PROCESSAMENTO
+    const resultado = numero / 3;
+
+    //SAÍDA
+    document.write(`Resultado arredondado para cima: ${Math.ceil(resultado)}<br>`);
+    document.write(`Resultado arredondado para baixo: ${Math.floor(resultado)}<br>`);
+    document.write(`Resultado arredondado para nr inteiro mais próximo: ${Math.round(resultado)}`);
+</script>
