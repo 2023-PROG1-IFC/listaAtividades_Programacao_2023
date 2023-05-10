@@ -16,7 +16,7 @@ _Lista Complementar_
 14 exercícios de Variáveis e Operadores.
 
 ## [Dúvidas](duvidas/)
-...
+Explicações solicitadas pelos alunos das turmas 1INFO1, 1INFO2 e 1INFO3.
 
 ## [Avaliações](avaliacoes/)
-...
+Atividades avaliativas aplicadas em laboratório sobre Variáveis e Operadores.
