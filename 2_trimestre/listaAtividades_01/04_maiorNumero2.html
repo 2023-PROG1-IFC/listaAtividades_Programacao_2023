@@ -3,10 +3,35 @@
     //Peça ao usuário para informar três números e diga, ao final do programa, qual dos três é o maior número.
 
     //ENTRADA
-
+    const num1 = prompt(`Informe um número:`).trim();
+    const num2 = prompt(`Informe outro número:`).trim();
+    const num3 = prompt(`Informe mais um número:`).trim();
 
     //PROCESSAMENTO
+    if (!isNaN(num1) && !isNaN(num2) && !isNaN(num3)) {
+        if (num1 > num2 && num1 > num3) {
+            alert(`O número ${num1} é o maior número!`);
+        }
+        else if (num2 > num1 && num2 > num3) {
+            alert(`O número ${num2} é o maior número!`);
+        }
+        else if (num3 > num1 && num3 > num2) {
+            alert(`O número ${num3} é o maior número!`);
+        }
+        else if (num1 == num2 || num1 == num3 || num2 == num3) {
+            alert(`Informe números diferentes!`);
+        }
+    }
+    else {
+        alert(`Um ou mais valores informados não são números!`);
+    }
 
+    // if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
+    //     alert(`Um ou mais valores informados não são números!`);
+    // }
+    // else {
+        
+    // }
 
     //SAÍDA
 

@@ -7,7 +7,16 @@
 
     //PROCESSAMENTO
     if (idade >= 16) {
-        alert(`Já pode votar!`);
+        const titulo = prompt(`Possui título? S ou N`).toUpperCase().trim();
+        if (titulo == "S") {
+            alert(`Apto para votar!`);
+        }
+        else if (titulo == "N") {
+            alert(`Faça o seu título eleitoral!`);
+        }
+        else {
+            alert(`Opção Inválida!`);
+        }
     }
     else {
         alert(`Não pode votar!`);
