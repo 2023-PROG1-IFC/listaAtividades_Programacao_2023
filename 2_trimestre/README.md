@@ -6,8 +6,10 @@
 ## [LISTA 1 - Aquecimento](listaAtividades_01/)
 7 exercícios sobre estrutura de decisão (if-else e if-else aninhado) usando operadores lógicos.
 ## [LISTA 2 - (Entrega 01)](listaAtividades_02/)
-7 exercícios sobre estrutura de decisão (if-else e if-else aninhado) usando operadores lógicos.
+18 exercícios sobre estrutura de decisão (if-else e if-else aninhado) usando operadores lógicos.
 
+## [LISTA 3 - (Complementares)](listaAtividades_03/)
+10 exercícios sobre estrutura de decisão (if-else e if-else aninhado) usando operadores lógicos.
 ## [Dúvidas pontuais](duvidas/)
 ...
 
