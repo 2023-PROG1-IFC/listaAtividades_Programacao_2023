@@ -1,0 +1,62 @@
+<script>
+    /*
+    //PROBLEMA
+    Faça um script para um caixa eletrônico. O script deverá perguntar ao usuário a valor do saque e depois informar quantas notas de cada valor serão fornecidas. As notas disponíveis serão as de 1, 5, 10, 50 e 100 reais. O valor mínimo é de 10 reais e o máximo de 600 reais. O script não deve se preocupar com a quantidade de notas existentes na máquina.
+    Exemplo: Para sacar a quantia de 256 reais, o script fornece duas notas de 100, uma nota de 50, uma nota de 5 e uma nota de 1;
+    Exemplo: Para sacar a quantia de 399 reais, o script fornece três notas de 100, uma nota de 50, quatro notas de 10, uma nota de 5 e quatro notas de 1.
+    */
+
+    let saque = Number(prompt(`Qual a quantia que deseja sacar?`));
+
+    let mensagemFinal = `Para sacar a quantia de ${saque.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}, o script fornece `;
+
+    const notasCem = Math.floor(saque / 100);
+    saque = saque % 100;
+    const notasCinquenta = Math.floor(saque / 50);
+    saque = saque % 50;
+    const notasDez = Math.floor(saque / 10);
+    saque = saque % 10;
+    const notasCinco = Math.floor(saque / 5);
+    saque = saque % 5;
+    const notasUm = saque;
+
+    let cedulasPendentes = 0;
+    if (notasCem > 0) { cedulasPendentes++; }
+    if (notasCinquenta > 0) { cedulasPendentes++; }
+    if (notasDez > 0) { cedulasPendentes++; }
+    if (notasCinco > 0) { cedulasPendentes++; }
+    if (notasUm > 0) { cedulasPendentes++; }
+
+    if (notasCem > 0) {
+        mensagemFinal = mensagemFinal + `${notasCem} notas de Cem`;
+        cedulasPendentes--;
+        if (cedulasPendentes > 1) { mensagemFinal = mensagemFinal + `, `; }
+        else if (cedulasPendentes == 1) { mensagemFinal = mensagemFinal + ` e `; }
+        else { mensagemFinal = mensagemFinal + `.`; }
+    }
+    if (notasCinquenta > 0) {
+        mensagemFinal = mensagemFinal + `${notasCinquenta} notas de Cinquenta`;
+        cedulasPendentes--;
+        if (cedulasPendentes > 1) { mensagemFinal = mensagemFinal + `, `; }
+        else if (cedulasPendentes == 1) { mensagemFinal = mensagemFinal + ` e `; }
+        else { mensagemFinal = mensagemFinal + `.`; }
+    }
+    if (notasDez > 0) {
+        mensagemFinal = mensagemFinal + `${notasDez} notas de Dez`;
+        cedulasPendentes--;
+        if (cedulasPendentes > 1) { mensagemFinal = mensagemFinal + `, `; }
+        else if (cedulasPendentes == 1) { mensagemFinal = mensagemFinal + ` e `; }
+        else { mensagemFinal = mensagemFinal + `.`; }
+    }
+    if (notasCinco > 0) {
+        mensagemFinal = mensagemFinal + `${notasCinco} notas de Cinco`;
+        cedulasPendentes--;
+        if (cedulasPendentes == 1) { mensagemFinal = mensagemFinal + ` e `; }
+        else { mensagemFinal = mensagemFinal + `.`; }
+    }
+    if (notasUm > 0) {
+        mensagemFinal = mensagemFinal + `${notasUm} notas de Um`;
+    }
+
+    document.write(mensagemFinal);
+</script>
