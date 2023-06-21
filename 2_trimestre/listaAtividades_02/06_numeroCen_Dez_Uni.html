@@ -11,6 +11,7 @@
     */
 
     //ENTRADA
+<<<<<<< HEAD
     let numero = Number(prompt("Digite um número inteiro menor que 1000: "));
 
     //PROCESSAMENTO
@@ -19,12 +20,27 @@
         const dezenas = Math.floor(numero % 100 / 10);
         const unidades = numero % 10;
         let mensagemFinal = "";
+=======
+    const numero = Number(prompt(`Informe um número inteiro menor que 1000:`));
+
+    //PROCESSAMENTO
+    if (numero < 1000) {
+        const centenas = Math.floor(numero / 100);
+        const dezenas = Math.floor(numero % 100 / 10);
+        const unidades = numero % 10;
+
+        let mensagemFinal = "";
+
+>>>>>>> 1INFO3
         if (centenas > 0) {
             mensagemFinal = mensagemFinal + `${centenas} Centena`;
             if (centenas > 1) {
                 mensagemFinal = mensagemFinal + "s";
             }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1INFO3
             if (dezenas > 0 && unidades > 0) {
                 mensagemFinal = mensagemFinal + ", ";
             }
@@ -36,7 +52,11 @@
             mensagemFinal = mensagemFinal + `${dezenas} Dezena`;
             if (dezenas > 1) {
                 mensagemFinal = mensagemFinal + "s";
+<<<<<<< HEAD
             }
+=======
+            }            
+>>>>>>> 1INFO3
             if (unidades > 0) {
                 mensagemFinal = mensagemFinal + " e ";
             }
@@ -50,7 +70,11 @@
         alert(mensagemFinal);
     }
     else {
+<<<<<<< HEAD
         alert(`Número inválido: Deve ser maior que 0 e menor que 1000!`);
+=======
+        alert(`O número precisa ser menor do que 1000!`);
+>>>>>>> 1INFO3
     }
 
     //SAÍDA
