@@ -11,9 +11,26 @@
     */
 
     //ENTRADA
+    const telefonou = Number(prompt(`Telefonou para a vítima? (1-Sim | 0-Não):`));
+    const esteve = Number(prompt(`Esteve no local do crime? (1-Sim | 0-Não):`));
+    const moraPerto = Number(prompt(`Mora perto da vítima? (1-Sim | 0-Não):`));
+    const devia = Number(prompt(`Devia para a vítima? (1-Sim | 0-Não):`));
+    const trabalhou = Number(prompt(`Trabalhou com a vítima? (1-Sim | 0-Não):`));
 
     //PROCESSAMENTO
+    // let resposta = 0;
+    // if (telefonou == "s") resposta = resposta + 1; //resposta++; resposta += 1;
+    // if (esteve == "s") resposta = resposta + 1;
+    // if (moraPerto == "s") resposta = resposta + 1;
+    // if (devia == "s") resposta = resposta + 1;
+    // if (trabalhou == "s") resposta = resposta + 1;
 
+    let resposta = telefonou + esteve + moraPerto + devia + trabalhou;
+
+    if (resposta == 3 || resposta == 4) alert(`Cúmplice!`);
+    else if (resposta == 5) alert(`Assassino!`);
+    else if (resposta == 2) alert(`Suspeito!`);
+    else alert(`Inocente!`);
     //SAÍDA
 
 </script>

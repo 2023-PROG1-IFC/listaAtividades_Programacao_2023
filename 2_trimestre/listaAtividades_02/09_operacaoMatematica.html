@@ -8,11 +8,53 @@
     */
 
     //ENTRADA
-
+    const numero1 = Number(prompt(`Informe um número:`).trim().replace(",", "."));
+    const numero2 = Number(prompt(`Informe outro número:`).replace(",", ".").trim());
+    const op = prompt(`Qual a operação desejada? \n + | - | * | /`).trim();
 
     //PROCESSAMENTO
+    let mensagem;
+    let conta = 0;
 
-    
+    if (isNaN(numero1) || isNaN(numero2)) {
+        alert(`Informe apenas números!`);
+    }
+    else {
+        if (op == "+") {
+            conta = numero1 + numero2;
+        }
+        else if (op == "-") {
+            conta = numero1 - numero2;
+        }
+        else if (op == "*") {
+            conta = numero1 * numero2;
+        }
+        else if (op == "/") {
+            conta = numero1 / numero2;
+        }
+        else {
+            alert(`Operação Inválida!`);
+        }
+
+        mensagem = `O número ${conta} é `;
+        if (conta >= 0) mensagem += `positivo, `;
+        else mensagem = mensagem + `negativo, `;
+
+        if (conta % 2 == 0) {
+            mensagem += `par`;
+            mensagem += ` e `;
+        }
+        else { mensagem += `ímpar e `; }
+
+        if (conta % 1 == 0) { //Number.isInteger(conta)
+            mensagem += `inteiro.`;
+        }
+        else {
+            mensagem += `decimal.`;
+        }
+        alert(mensagem);
+    }
+
     //SAÍDA
 
 
