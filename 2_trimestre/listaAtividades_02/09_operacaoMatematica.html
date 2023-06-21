@@ -8,9 +8,56 @@
     */
 
     //ENTRADA
+    const numero1 = Number(prompt(`Digite um número:`).replace(",", ".").trim());
+    const numero2 = Number(prompt(`Digite outro número:`).replace(",", ".").trim());
+    const operacao = prompt(`Digite o símbolo da operação matemática (+ | - | * | / ):`).trim();
+    let bill;
 
     
     //PROCESSAMENTO
+    if (operacao == "+") {
+        bill = numero1 + numero2;
+        alert('soma');
+    }
+    else if (operacao == "-") {
+        bill = numero1 - numero2;
+    }
+    else if (operacao == "/") {
+        bill = numero1 / numero2;
+    }
+    else if (operacao == "*") {
+        bill = numero1 * numero2;
+    }
+    else {
+        alert(`Operação Inválida!`);
+    }
+
+    if (bill % 2 == 0) {
+        if (bill < 0) {
+            alert(`${bill} é negativo, inteiro e par!`);
+        }
+        else {
+            alert(`${bill} é positivo, inteiro e par!`);
+        }
+    }
+    else {
+        if (bill < 0) {
+            if (Number.isInteger(bill)) {
+                alert(`${bill} é ímpar, negativo e inteiro!`);
+            }
+            else {
+                alert(`${bill} é ímpar, negativo e decimal!`);
+            }
+        }
+        else {
+            if (Number.isInteger(bill)) {
+                alert(`${bill} é ímpar, positivo e inteiro!`);
+            }
+            else {
+                alert(`${bill} é ímpar, positivo e decimal!`);
+            }
+        }
+    }
 
     
     //SAÍDA
