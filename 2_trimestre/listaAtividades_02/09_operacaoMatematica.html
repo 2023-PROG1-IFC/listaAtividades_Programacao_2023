@@ -8,46 +8,11 @@
     */
 
     //ENTRADA
-    const numero1 = Number(prompt(`Informe um número inteiro:`).trim());
-    const numero2 = Number(prompt(`Informe outro número inteiro:`).trim());
-    const operacao = prompt(`Qual operação você deseja realizar? + | - | * | / `).trim();
 
+    
     //PROCESSAMENTO
-    let resultadoOperacao = 0;
-    if (operacao === "+" || operacao == "-" || operacao == "*" || operacao == "/") {
-        if (operacao == "+") {
-            resultadoOperacao = numero1 + numero2;
-        }
-        else if (operacao == "-") {
-            resultadoOperacao = numero1 - numero2;
-        }
-        else if (operacao == "*") {
-            resultadoOperacao = numero1 * numero2;
-        }
-        else {
-            resultadoOperacao = numero1 / numero2;
-        }
-
-        let mensagemFinal = `O número ${resultadoOperacao} é `;
-        
-        if (resultadoOperacao % 2 == 0) mensagemFinal = mensagemFinal + `par, `;
-        else mensagemFinal += `ímpar, `;
-
-        if (resultadoOperacao >= 0) {
-            mensagemFinal += `positivo`;
-            mensagemFinal += ` e `;
-        }
-        else { mensagemFinal += `negativo e `; }
-        
-        if (resultadoOperacao % 1 > 0) { mensagemFinal += `decimal.`; }
-        else { mensagemFinal += `inteiro.`; }
-
-        alert(mensagemFinal);
-    }
-    else {
-        alert(`Operação Inválida!`);
-    }
-
+    
+    
     //SAÍDA
 
 
