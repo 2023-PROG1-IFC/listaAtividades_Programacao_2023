@@ -3,10 +3,20 @@
     //Peça para o usuário informar três números e identifique qual é o menor número e apresente-o ao final do programa.
 
     //ENTRADA
-
+    const n1 = Number(prompt("Informe o primeiro número: "));
+    const n2 = Number(prompt("Informe o segundo número: "));
+    const n3 = Number(prompt("Informe o terceiro número: "));
 
     //PROCESSAMENTO
-
+    if (n1 < n2 && n1 < n3) {
+        alert(`O menor número é ${n1}`);
+    }
+    else if (n2 < n1 && n2 < n3) {
+        alert(`O menor número é ${n2}`);
+    }
+    else {
+        alert(`O menor número é ${n3}`);
+    }
 
     //SAÍDA
 
