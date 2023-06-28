@@ -11,8 +11,25 @@
     */
 
     //ENTRADA
+    const telefonou = prompt("Telefonou para a vítima?").trim().toLowerCase();
+    const esteveLocal = prompt("Esteve no local do crime?").trim().toLowerCase();
+    const moraPerto = prompt("Mora perto da vítima?").trim().toLowerCase();
+    const devia = prompt("Devia para a vítima?").trim().toLowerCase();
+    const trabalhou = prompt("Já trabalhou com a vítima?").trim().toLowerCase();
 
     //PROCESSAMENTO
+    let pontos = 0;
+
+    if (telefonou == "sim") pontos++;
+    if (esteveLocal == "sim") pontos++;
+    if (moraPerto == "sim") pontos++;
+    if (devia == "sim") pontos++;
+    if (trabalhou == "sim") pontos++;
+
+    if (pontos == 2) alert("Suspeita");
+    else if (pontos == 3 || pontos == 4) alert("Cúmplice");
+    else if (pontos == 5) alert("Assassino");
+    else alert("Inocente");
 
     //SAÍDA
 

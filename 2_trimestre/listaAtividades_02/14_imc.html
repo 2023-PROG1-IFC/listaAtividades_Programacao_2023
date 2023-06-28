@@ -8,11 +8,17 @@
     // imc > 30: "Obeso"
 
     // Entrada
-
+    const peso = parseFloat(prompt("Digite o peso: "));
+    const altura = parseFloat(prompt("Digite a altura: "));
     
     // Processamento
-
+    const imc = peso / altura ** 2;
+    let classificacao = "";
+    if (imc <= 18.5) classificacao = "Subpeso";
+    else if (imc <= 25) classificacao = "Normal";
+    else if (imc <= 30) classificacao = "Sobrepeso";
+    else classificacao = "Obeso";
     
     // Saída
-
+    alert("IMC: " + imc + "\nClassificação: " + classificacao);
 </script>

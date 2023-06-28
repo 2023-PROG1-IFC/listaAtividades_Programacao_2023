@@ -14,12 +14,24 @@
     */
 
     //ENTRADA
-
+    let litros = parseFloat(prompt("Quantos litros de combustível você deseja abastecer?"));
+    let tipo = prompt("Qual o tipo de combustível? Digite A para álcool ou G para gasolina: ").trim().toUpperCase();
 
     //PROCESSAMENTO
+    let preco = 0;
+    if (tipo == "A") {
+        if (litros <= 20) preco = 6.10 * litros * 0.97;
+        else preco = 6.10 * litros * 0.95;
+    }
+    else if (tipo == "G") {
+        if (litros <= 20) preco = 6.50 * litros * 0.96;
+        else preco = 6.50 * litros * 0.94;
+    }
+    else {
+        alert("Tipo de combustível inválido.");
+    }
 
-    
     //SAÍDA
-
+    alert(`O valor a ser pago é R$ ${preco.toFixed(2).replace(".", ",")}.`);
 
 </script>

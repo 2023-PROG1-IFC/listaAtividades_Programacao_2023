@@ -13,8 +13,16 @@
     */
 
     // Entrada
-    
+    let codigo = Number(prompt("Digite o código do produto: "));
+
     // Processamento
+    if (codigo == 1) alert(`Não-perecível!`);
+    else if (codigo >= 2 && codigo <= 4) alert(`Perecível!`);
+    else if (codigo == 5 || codigo == 6) alert(`Vestuário!`);
+    else if (codigo == 7) alert(`Higiene Pessoal!`);
+    else if (codigo >= 8 && codigo <= 15) alert(`Limpeza e Utensílios Domésticos!`);
+    else if (codigo >= 16 && codigo <= 20) alert(`Outros!`);
+    else alert(`Código inválido!`);
 
     // Saída
 

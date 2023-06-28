@@ -15,9 +15,25 @@
     */
 
     // Entrada
+    const viagensDia = Number(prompt(`Informe quantas viagens foram realizadas por dia:`));
+    const cargo = prompt(`Informe o cargo que ocupa (M-Motorista | C-Cobrador):`);
     
     // Processamento
+    const valorDiaria = 100;
+    let valorFinal = 0;
+    let adicional = 0;
+    if (cargo == "M" && viagensDia <= 10) {
+        adicional = 20;
+    }
+    else if (cargo == "M" && viagensDia > 10) {
+        adicional = 35;
+    }
+    else if (cargo == "C" && viagensDia > 10) {
+        adicional = 10;
+    }
+
+    valorFinal = valorDiaria + (valorDiaria * adicional / 100);
 
     // Saída
-
+    alert(`Cargo: ${cargo}\nValor Final da Diária: R$ ${valorFinal.toFixed(2)}`);
 </script>

@@ -8,12 +8,39 @@
     */
 
     //ENTRADA
-
+    let n1 = parseFloat(prompt("Digite um número: "));
+    let n2 = parseFloat(prompt("Digite outro número: "));
+    let operacao = prompt("Qual operação você deseja realizar? Digite + para soma, - para subtração, * para multiplicação ou / para divisão: ").trim();
 
     //PROCESSAMENTO
-
+    let resultado = 0;
     
+    if (operacao == "+") {
+        resultado = n1 + n2;
+    }
+    else if (operacao == "-") {
+        resultado = n1 - n2;
+    }
+    else if (operacao == "*") {
+        resultado = n1 * n2;
+    }
+    else if (operacao == "/") {
+        resultado = n1 / n2;
+    }
+    else {
+        alert("Operação inválida.");
+    }
+
+    let mensagem = `O resultado da operação é ${resultado}. Este número é `;
+    if (resultado % 2 == 0) mensagem += "par, ";
+    else mensagem += "ímpar, ";
+
+    if (resultado > 0) mensagem += "positivo e ";
+    else mensagem += "negativo e ";
+
+    if (resultado % 1 == 0) mensagem += "inteiro.";
+    else mensagem += "decimal.";
+
     //SAÍDA
-
-
+    alert(mensagem);
 </script>

@@ -15,9 +15,14 @@
     */
 
     // Entrada
+    let salario = Number(prompt("Digite o valor do seu salário: "));
     
     // Processamento
+    if (salario <= 2000) salario = salario * 1.15;
+    else if (salario <= 4000) salario = salario * 1.1;
+    else if (salario <= 7000) salario = salario * 1.075;
+    else salario = salario * 1.05;
 
     // Saída
-
+    alert(`Salário reajustado: R$ ${salario.toFixed(2).replace(".", ",")}`);
 </script>

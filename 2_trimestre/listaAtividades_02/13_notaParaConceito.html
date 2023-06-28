@@ -9,10 +9,16 @@
     // Entre 5.9 e zero            E
 
     // Entrada
-
+    const nota = parseFloat(prompt("Digite a nota: "));
     
     // Processamento
-
+    let conceito = "";
+    if (nota >= 9) conceito = "A";
+    else if (nota >= 8) conceito = "B";
+    else if (nota >= 7) conceito = "C";
+    else if (nota >= 6) conceito = "D";
+    else if (nota >= 0) conceito = "E";
+    else alert("Nota inválida.");
     
     // Saída
 
