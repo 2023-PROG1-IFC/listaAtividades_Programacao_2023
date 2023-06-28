@@ -11,11 +11,20 @@
     */
 
     //ENTRADA
+    const tempoViagem = Number(prompt(`Quanto tempo (em horas) gastou durante a viagem?`).trim().replace(",", "."));
+    const litrosCombustivel = Number(prompt(`Quantos litros de combustível foram consumidos para realizar a viagem?`).trim().replace(",", "."));
+    const precoLitro = Number(prompt(`Qual o preço do litro do combustível?`).trim().replace(",", "."));
+    const kmTotal = Number(prompt(`Quantos Kms foram percorridos em toda a viagem?`).trim().replace(",", "."));
 
-    
     //PROCESSAMENTO
+    const velMedia = kmTotal / tempoViagem;
+    const consumo = kmTotal / litrosCombustivel;
+    const custoCombustivel = precoLitro * litrosCombustivel;
+    const custoKm = custoCombustivel / kmTotal;
 
-    
     //SAÍDA
-
+    document.write(`A velocidade média foi de ${velMedia.toFixed(1).replace(".",",")}.`);
+    document.write(`O consumo médio foi de ${consumo.toFixed(1).replace(".",",")}.`);
+    document.write(`O custo total em combustível foi de R$ ${custoCombustivel.toFixed(2).replace(".",",")}.`);
+    document.write(`O custo por Km foi de R$ ${custoKm.toFixed(2).replace(".",",")}.`);
 </script>

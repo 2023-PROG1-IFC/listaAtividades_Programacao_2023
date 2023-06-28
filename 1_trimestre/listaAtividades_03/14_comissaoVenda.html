@@ -6,11 +6,14 @@
     */
 
     //ENTRADA
+    let salarioFixo = Number(prompt(`Qual o seu salário fixo mensal?`).trim().replace(",", "."));
+    const carrosVendidos = Number(prompt(`Quantos carros foram vendidos no mês?`));
+    const valorVendas = Number(prompt(`Qual o valor total faturado em vendas?`).trim().replace(",", "."));
 
-    
     //PROCESSAMENTO
+    salarioFixo = salarioFixo + (carrosVendidos * 225) + (salarioFixo * 5 / 100);
+    salarioFixo = salarioFixo * 0.8;
 
-    
     //SAÍDA
-
+    document.write(`O salário final será de R$ ${salarioFixo.toFixed(2).replace(".", ",")}.`);
 </script>

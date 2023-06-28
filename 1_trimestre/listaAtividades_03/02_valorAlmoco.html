@@ -6,11 +6,11 @@
     */
 
     //ENTRADA
+    const pesoPrato = Number(prompt(`Qual o peso do prato?`).trim().replace(",", "."));
 
-    
     //PROCESSAMENTO
+    const precoRefeicao = pesoPrato * 49.9;
 
-    
     //SAÍDA
-
+    document.write(`O preço da refeição será de R$ ${precoRefeicao.toFixed(2).replace(".", ",")}`);
 </script>

@@ -6,11 +6,12 @@
     */
 
     //ENTRADA
+    const precoOriginal = Number(prompt(`Qual o preço original do produto?`));
+    const precoCampanha = Number(prompt(`Qual o preço de campanha do produto?`));
 
-    
     //PROCESSAMENTO
+    const descontoCampanha = 1 - (precoCampanha / precoOriginal);
 
-    
     //SAÍDA
-
+    document.write(`O desconto do preço foi de ${descontoCampanha.toFixed(2).replace(".", ",")}% durante a campanha`);
 </script>
