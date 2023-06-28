@@ -10,16 +10,11 @@
     */
 
     //ENTRADA
-    const horasPedreiro = Number(prompt(`Quantas horas foram trabalhadas pelo pedreiro?`).trim().replace(",", "."));
-    const horasPintor = Number(prompt(`Quantas horas foram trabalhadas pelo pintor?`).trim().replace(",", "."));
 
+    
     //PROCESSAMENTO
-    const totalPagar = (horasPedreiro * 30) + (horasPintor * 25);
-    const precoPedreiro = horasPedreiro * 30;
-    const precoPintor = horasPintor * 25;
 
+    
     //SAÍDA
-    document.write(`O total gasto foi de R$ ${totalPagar.toFixed(2).replace(".", ",")}.`);
-    document.write(`O custo com pedreiro foi de R$ ${precoPedreiro.toFixed(2).replace(".", ",")}.`);
-    document.write(`O custo com pintor foi de R$ ${precoPintor.toFixed(2).replace(".", ",")}.`);
+
 </script>
