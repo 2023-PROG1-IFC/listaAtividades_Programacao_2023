@@ -72,17 +72,3 @@ Calcule e apresente o preço final do computador de acordo com a Forma de Pagame
 Peça para o usuário informar o preço do transporte aéreo para dois destinos de viagem (São Paulo, Rio de Janeiro). Peça também para informar o preço do hotel para os dois destinos (São Paulo, Rio de Janeiro) e quantos dias pretende ficar no destino.
 Calcule o custo final para cada um e apresente a melhor decisão, considerando que o destino pretendido será o com custo final mais baixo.
 Apresente o destino final e o custo final da viagem para o destino.
-
-#
-
-## **E agora? Finalizado?**
-
-_Se a resposta é sim! **Parabéns!** Você concluiu a lista de exercícios complementares de Estrutura de Decisão!_
-
-**Restando qualquer dúvida, contate o Professor da disciplina de Programação I.**
-
-Não restando nenhuma dúvida sobre o conteúdo, você pode prosseguir para o próximo assunto que será abordado na disciplina: **<u>Operador Ternário</u>**.
-
-Para navegar até o próximo assunto, clique no link abaixo:
-
-# [<u>**Operador Ternário**</u>](../../03_02_operador_ternario/README.md)
