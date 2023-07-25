@@ -12,8 +12,23 @@
     */
 
     // Entrada
-    
+    const valor = Number(prompt("Informe o valor do computador:").trim().replace(",", "."));
+    const formaPagamento = prompt("Informe a forma de pagamento (B - Boleto, D - Dinheiro, P - PIX):").trim().toUpperCase();
+
     // Processamento
+    let valorFinal = 0;
+    if (formaPagamento == "B") {
+        valorFinal = valor - (valor * 3 / 100);
+    }
+    else if (formaPagamento == "D") {
+        valorFinal = valor - (valor * 5 / 100);
+    }
+    else if (formaPagamento == "P") {
+        valorFinal = valor - (valor * 10 / 100);
+    }
+    else {
+        alert("Forma de pagamento inválida!");
+    }
 
     // Saída
 

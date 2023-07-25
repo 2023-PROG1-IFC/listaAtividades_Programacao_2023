@@ -12,11 +12,25 @@
     */
 
     // Entrada
+    let salario = Number(prompt("Informe o seu salário: "));
+    const auxilioTransporte = prompt("Deseja receber auxílio transporte? (S/N)");
 
-    
     // Processamento
+    let desconto = 0;
+    let adicional = 0;
+    if (auxilioTransporte == "S") {
+        const veiculoProprio = prompt("Você utiliza veículo próprio? (S/N)");
+        if (veiculoProprio == "S") {
+            desconto = salario * 0.06;
+            adicional = 200;
+        }
+        else {
+            desconto = salario * 0.06;
+            adicional = 150;
+        }
+    }
+    salario = salario - desconto + adicional;
 
-    
     // Saída
-
+    alert(`Salário Final: R$ ${salario.toFixed(2).replace(".", ",")}`);
 </script>

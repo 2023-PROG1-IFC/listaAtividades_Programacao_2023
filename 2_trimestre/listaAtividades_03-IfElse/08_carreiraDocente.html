@@ -19,9 +19,20 @@
     */
 
     // Entrada
-    
+    const anos = Number(prompt("Informe a quantidade de anos de carreira:"));
+    const projetosPesquisa = Number(prompt("Informe a quantidade de Projetos de Pesquisa que já coordenou:"));
+    const projetosExtensao = Number(prompt("Informe a quantidade de Projetos de Extensão que já orientou:"));
+    const tccs = Number(prompt("Informe a quantidade de TCCs que já orientou:"));
+
     // Processamento
+    const pontos = (anos * 2.5) + (projetosPesquisa * 5) + (projetosExtensao * 5) + (tccs * 3);
 
     // Saída
-
+    if (pontos <= 30) {
+        document.write("CONVIDADO");
+    } else if (pontos <= 50) {
+        document.write("AGREGADO");
+    } else {
+        document.write("TITULAR");
+    }
 </script>

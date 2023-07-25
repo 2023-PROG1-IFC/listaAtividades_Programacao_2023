@@ -10,11 +10,21 @@
     */
 
     // Entrada
+    const valorImovel = Number(prompt("Informe o valor do imóvel: "));
+    const anosFinanciamento = Number(prompt("Informe em quantos anos será realizado o financiamento: "));
+    const salario = Number(prompt("Informe o seu salário: "));
 
-    
     // Processamento
+    const mesesFinanciamento = anosFinanciamento * 12;
+    const valorPrestacao = valorImovel / mesesFinanciamento;
 
-    
+    if (valorPrestacao > salario * 0.3) {
+        alert(`Financiamento negado! O valor da prestação excede 30% do seu salário.`);
+    }
+    else {
+        alert(`Financiamento concedido! O valor da prestação é de R$ ${valorPrestacao.toFixed(2).replace(".", ",")}.`);
+    }
+
     // Saída
 
 </script>
