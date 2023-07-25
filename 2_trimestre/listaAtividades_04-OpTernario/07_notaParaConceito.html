@@ -10,11 +10,15 @@
     // Entre 5.9 e zero            E
 
     //Entrada
-
+    const nota = Number(prompt("Informe a nota:").trim().replace(",", "."));
 
     //Processamento
-
+    const conceito = (nota >= 9) ? "A"
+        : (nota >= 8) ? "B"
+        : (nota >= 7) ? "C"
+        : (nota >= 6) ? "D"
+        : "E";
     
     //Saída
-
+    document.write("Conceito: " + conceito);
 </script>
