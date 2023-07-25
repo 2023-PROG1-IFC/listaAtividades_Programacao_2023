@@ -5,7 +5,10 @@
 #### Turmas: 1INFO1 / 1INFO2 / 1INFO3
 ## **<u>[1º Trimestre](https://github.com/ldmfabio/listaAtividades_Programacao_2023/tree/master/1_trimestre)</u>**
 #### - Manipulação de Strings
+- [Lista 1 [Obrigatória]](https://github.com/ldmfabio/listaAtividades_Programacao_2023/blob/master/1_trimestre/listaAtividades_01/README.md)
 #### - Variáveis e Operadores
+- [Lista 2 [Obrigatória]](https://github.com/ldmfabio/listaAtividades_Programacao_2023/tree/master/1_trimestre/listaAtividades_02/README.md)
+- [Lista 3 [Complementar]](https://github.com/ldmfabio/listaAtividades_Programacao_2023/blob/master/1_trimestre/listaAtividades_03/README.md)
 
 ## **<u>[2º Trimestre](https://github.com/ldmfabio/listaAtividades_Programacao_2023/tree/master/2_trimestre)</u>**
 #### - Estruturas de Decisão
