@@ -9,11 +9,27 @@
     */
 
     //ENTRADA
-
+    const consultaBaixa = Number(prompt(`Quantas consultas de baixa complexidade diárias?`)) * 15;
+    const consultaMedia = Number(prompt(`Quantas consultas de média complexidade diárias?`)) * 40;
+    const consultaAlta = Number(prompt(`Quantas consultas de alta complexidade diárias?`)) * 75;
 
     //PROCESSAMENTO
+    let tempoTotal = (consultaAlta + consultaMedia + consultaBaixa) / 60;
+    let minutos = (consultaAlta + consultaMedia + consultaBaixa) % 60;
+    if (tempoTotal <= 8) {
+        let salario = tempoTotal * 50;
+        alert(`O salário será R$ ${salario.toFixed(2).replace(".", ",")} trabalhando ${tempoTotal} horas e ${minutos} minutos`);
+    }
+    else if (tempoTotal <= 10) {
+        let salario = tempoTotal * 75;
+        alert(`O salário será R$ ${salario.toFixed(2).replace(".", ",")} trabalhando ${tempoTotal} horas e ${minutos} minutos`);
+    }
+    else {
+        let salario = tempoTotal * 90;
+        alert(`O salário será R$ ${salario.toFixed(2).replace(".", ",")} trabalhando ${tempoTotal} horas e ${minutos} minutos`);
+    }
 
-    
+
     //SAÍDA
 
 
