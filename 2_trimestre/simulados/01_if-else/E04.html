@@ -1,0 +1,34 @@
+<script>
+    //PROBLEMA: Vínculo empregatício
+    //Peça para o usuário informar qual a sua remuneração mensal (salário). Peça também para o usuário informar qual cargo que ocupa e quantas horas trabalha por dia. Considere 20 dias de trabalho no mês.
+    //Se o usuário for "Estagiário", e trabalhar até 6 horas diárias (inclusive), o programa deverá informar quanto recebe por hora.
+    //Se o usuário for "Estagiário", e trabalhar mais que 6 horas diárias, o programa deverá apresentar a mensagem "Precisa ser contratado", além de calcular um adicional de 50% (50/100) na sua remuneração. Apresente também quanto recebe por hora, já com o adicional previsto.
+    //Se o usuário for "Programador" e trabalhar até 8 horas diárias (inclusive), o programa deverá informar quanto recebe por hora.
+    //Se o usuário for "Programador" e trabalhar mais que 8 horas diárias, o programa deverá calcular um adicional de 30% (30/100) na sua remuneração. Apresente também quanto recebe por hora, já com o adicional previsto.
+
+    //ENTRADA
+    const dinheiro = Number(prompt(`Informe quanto você recebe por mês:`).trim().replace(",", "."));
+    const cargo = prompt(`Informe o seu cargo: E-Estagiário | P-Programador`).trim().toLowerCase();
+    const hora = Number(prompt(`Informe quantas horas você trabalha por dia:`).trim().replace(",", "."));
+
+    //PROCESSAMENTO
+    if (cargo == "e") {
+        if (hora <= 6) {
+            document.write(`Você recebe R$ ${(dinheiro / (hora * 20)).toFixed(2).replace(".", ",")} por hora.`);
+        }
+        else {
+            document.write(`Precisa ser contratado! Você recebe R$ ${((dinheiro * 1.5) / (hora * 20)).toFixed(2).replace(".", ",")}`);
+        }
+    }
+    else if (cargo == "p") {
+        if (hora <= 8) {
+            document.write(`Você recebe R$ ${(dinheiro / (hora * 20)).toFixed(2).replace(".", ",")} por hora.`);
+        }
+        else {
+            document.write(`Você recebe RR ${(dinheiro * 1.3 / (hora * 20)).toFixed(2).replace(".", ",")} por hora.`);
+        }
+    }
+
+    //SAÍDA
+
+</script>
