@@ -1,0 +1,16 @@
+<meta charset="utf-8" />
+<script>
+    // Considere que o preço final de um celular é a soma do custo de fábrica, o imposto de importação (40%) e logística de distribuição (12%), ambos aplicados sobre o custo de fábrica.
+    // Faça um script que leia o custo de fábrica do celular e calcule os custos adicionais, apresentando o custo final do celular ao comprador.
+
+    //ENTRADA
+    const custoFabrica = parseFloat(prompt("Informe o custo de fábrica do celular: "));
+    
+    //PROCESSAMENTO
+    const impostoImportacao = custoFabrica * 0.4;
+    const logisticaDistribuicao = custoFabrica * 0.12;
+    const precoFinal = custoFabrica + impostoImportacao + logisticaDistribuicao;
+
+    //SAÍDA
+    document.write(`O custo final do celular é de R$ ${precoFinal.toFixed(2).replace(".", ",")}`);
+</script>

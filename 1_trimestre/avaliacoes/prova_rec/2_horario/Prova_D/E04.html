@@ -1,0 +1,15 @@
+<meta charset="utf-8" />
+<script>
+    // Você foi encarregado de realizar uma pesquisa sobre uso de impressoras. A sua pesquisa deverá apresentar o percentual de pessoas que possuem impressora em casa. Para isso, elabore um algoritmo que leia o número total de pessoas abordadas e o número de pessoas que possuem impressora em sua casa. Por fim, com base nestes dados, escreva o percentual de pessoas que possuem impressora.
+    // Por exemplo, entre 40 pessoas abordadas, 20 possuem impressora em casa, o que equivale a 50% destas 40 pessoas abordadas.
+
+    //ENTRADA
+    const totalPessoas = parseInt(prompt("Informe o total de pessoas abordadas: "));
+    const pessoasComImpressora = parseInt(prompt("Informe o total de pessoas com impressora em casa: "));
+
+    //PROCESSAMENTO
+    const percentual = (pessoasComImpressora / totalPessoas) * 100;
+
+    //SAÍDA
+    document.write(`O percentual de pessoas com impressora em casa é de ${percentual.toFixed(2).replace(".", ",")}%`);
+</script>

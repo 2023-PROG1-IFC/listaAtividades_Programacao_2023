@@ -1,0 +1,14 @@
+<meta charset="utf-8" />
+<script>
+    // Considere que o preço final de um carro novo é a soma do custo de fábrica, a porcentagem do distribuidor (28%) e dos impostos (45%), ambos aplicados sobre o custo de fábrica.
+    // Faça um script que leia o custo de fábrica do carro e calcule os custos adicionais, apresentando o custo final do carro ao comprador.
+
+    //ENTRADA
+    const custoFabrica = parseFloat(prompt("Informe o custo de fábrica do carro: "));
+
+    //PROCESSAMENTO
+    const precoFinal = custoFabrica + (custoFabrica * 0.28) + (custoFabrica * 0.45);
+
+    //SAÍDA
+    document.write(`O custo final do carro é de R$ ${precoFinal.toFixed(2).replace(".", ",")}`);
+</script>

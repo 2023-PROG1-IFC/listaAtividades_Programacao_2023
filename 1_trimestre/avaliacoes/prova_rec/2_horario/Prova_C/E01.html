@@ -1,0 +1,14 @@
+<meta charset="utf-8" />
+<script>
+    // Elaborar um programa para um estacionamento. O programa deve ler o valor para cada hora que o veículo ficará estacionado e o tempo que a pessoa utilizou em minutos. Informe o valor a ser pago pelo cliente, sabendo que as frações de hora devem ser cobradas de forma integral.
+
+    //ENTRADA
+    const valorHora = parseFloat(prompt("Informe o valor da hora: "));
+    const tempoMinutos = parseInt(prompt("Informe o tempo utilizado em minutos: "));
+    
+    //PROCESSAMENTO
+    const tempoHoras = Math.ceil(tempoMinutos / 60);
+
+    //SAÍDA
+    document.write(`O valor a ser pago pelo cliente é de R$ ${(tempoHoras * valorHora).toFixed(2).replace(".", ",")}`);
+</script>

@@ -1,0 +1,14 @@
+<meta charset="utf-8" />
+<script>
+    // Elaborar um programa para uma lan house. O programa deve ler o valor a ser pago para cada 10 minutos de utilização do computador e o tempo total que a pessoa utilizou em minutos. Informe o valor a ser pago pelo cliente, sabendo que as frações extras de 10 minutos devem ser cobradas de forma integral.
+
+    //ENTRADA
+    const valorPor10Minutos = parseFloat(prompt("Informe o valor a ser pago para cada 10 minutos de utilização do computador: "));
+    const tempoTotal = parseInt(prompt("Informe o tempo total de utilização do computador em minutos: "));
+    
+    //PROCESSAMENTO
+    const valorTotal = Math.ceil(tempoTotal / 10) * valorPor10Minutos;
+
+    //SAÍDA
+    document.write(`O valor total a ser pago pelo cliente é de R$ ${valorTotal.toFixed(2).replace(".", ",")}`);
+</script>
