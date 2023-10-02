@@ -1,0 +1,25 @@
+<script>
+    /*
+    Problema: Imprimir fotocópias
+    Pergunte para o usuário quantas cópias ele deseja imprimir.
+    Considere que cada foto cópia R$ 0,10 e que a impressão de cada página demora 20 segundos.
+    Calcule o custo total que o usuário terá para imprimir todas as cópias e o tempo que demorará para imprimir todas as cópias, EM MINUTOS.
+    Considere que, se a quantidade de impressões for maior que 30, o usuário ganha 20% de desconto no valor total. Ainda, se a quantidade de fotos for maior que 50, o usuário ganha 25% de desconto no valor total.
+    Apresente o custo total gasto com as impressões.
+    */
+    //Entrada
+    const copias = Number(prompt(`Informe a quantidade de cópias que deseja imprimir:`));
+
+    //Processamento
+    let custo = copias * 0.10;
+    const tempo = copias * 20 / 60;
+    if (copias > 30 && copias <= 50) {
+        custo = custo * 0.8;
+    }
+    else if (copias > 50) {
+        custo = custo * 0.75;
+    }
+
+    //Saída
+    alert(`O custo total será de R$ ${custo.toFixed(2)}. O tempo total será de ${tempo} minutos.`);
+</script>

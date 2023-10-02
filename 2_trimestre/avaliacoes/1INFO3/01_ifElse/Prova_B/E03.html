@@ -1,0 +1,40 @@
+<script>
+    /*
+    Problema: Salário Líquido
+    Em uma Universidade, todos os Professores trabalham 40H por semana. O salário bruto de cada Professor é calculado de acordo com a sua formação e quantos anos de carreira possui na instituição.
+    Faça um programa que receba o seu maior grau de formação e há quanto tempo trabalha na instituição.
+    Considere que o salário bruto do Professor é calculado da seguinte forma:
+    - E-Especialista: R$ 40,00 por hora
+    - M-Mestre: R$ 55,00 por hora
+    - D-Doutor: R$ 65,00 por hora
+    Sobre o tempo de trabalho, considere que:
+    - Se o Professor possuir mais de 3 anos de instituição, ele recebe um adicional de 20% sobre o salário bruto
+    - Se o Professor possuir mais de 6 anos de instituição, ele recebe um bônus de 40% sobre o salário bruto
+    - Se o Professor possuir mais de 9 anos de instituição, ele recebe um bônus de 55% sobre o salário bruto
+    Apresente o salário bruto do Professor ao final do programa.
+    */
+
+    //Entrada
+    const tempoTrabalho = Number(prompt(`Há quanto tempo trabalha na instituição?`));
+    const grauFormacao = prompt(`Qual o seu maior formação? E-Especialista | M-Mestre | D-Doutor`).toUpperCase().trim();
+
+    //Processamento
+    let bonus = 1;
+    if (tempoTrabalho > 3 && tempoTrabalho <= 6) { bonus = 1.2; }
+    else if (tempoTrabalho > 6 && tempoTrabalho <= 9) { bonus = 1.4; }
+    else if (tempoTrabalho > 9) { bonus = 1.55; }
+
+    let salarioFinal = 0;
+    if (grauFormacao == "E") {
+        salarioFinal = 40 * 40 * 4 * bonus;
+    }
+    else if (grauFormacao == "M") {
+        salarioFinal = 40 * 55 * 4 * bonus;
+    }
+    else if (grauFormacao == "D") {
+        salarioFinal = 40 * 65 * 4 * bonus;
+    }
+
+    //Saída
+    alert(`O salário final será de R$ ${salarioFinal.toFixed(2).replace(".", ",")}.`);
+</script>

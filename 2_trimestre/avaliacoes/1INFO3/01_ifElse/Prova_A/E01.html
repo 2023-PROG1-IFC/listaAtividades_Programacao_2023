@@ -1,0 +1,27 @@
+<script>
+    /*
+    Problema: Intensidade do Café
+    Uma cafeteria fornece café em três intensidades: fraco, médio e forte. Cada intensidade possui uma gramagem porção diferente de café para cada 100ml.
+    Faça um programa que receba a intensidade do café e a quantidade de café desejada em ml e calcule a quantidade de café em gramas que será fornecida.
+    Considere que cada 100ml de café fraco possui 10g de café, cada 100ml de café médio possui 15g de café e cada 100ml de café forte possui 20g de café.
+    */
+    
+    //Entrada
+    const intensidade = Number(prompt(`Informe a intensidade do café (1-Fraco, 2-Médio, 3-Forte):`));
+    const quantidade = Number(prompt(`Informe a quantidade de café desejada (em ml):`));
+
+    //Processamento
+    let gramagem = 0;
+    if (intensidade == 1) {
+        gramagem = quantidade * 10 / 100;
+    } else if (intensidade == 2) {
+        gramagem = quantidade * 15 / 100;
+    } else if (intensidade == 3) {
+        gramagem = quantidade * 20 / 100;
+    } else {
+        alert(`Intensidade inválida!`);
+    }
+
+    //Saída
+    alert(`A quantidade de café em gramas é ${gramagem.toFixed(2)}g.`);
+</script>

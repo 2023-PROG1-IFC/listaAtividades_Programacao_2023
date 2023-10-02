@@ -1,0 +1,64 @@
+<script>
+    /*
+    Problema: Salário Líquido
+    Em uma empresa, todos os funcionários trabalham 40H por semana. O salário bruto de cada funcionário é calculado de acordo com o cargo ocupado e quantos anos possui na empresa.
+    Faça um programa que receba o cargo ocupado pelo funcionário e o tempo de trabalho na empresa.
+    Considere que o salário bruto de um funcionário é calculado da seguinte forma:
+    - G-Gerente: R$ 30,00 por hora
+    - S-Supervisor: R$ 22,00 por hora
+    - A-Atendente: R$ 15,00 por hora
+    Sobre o tempo de trabalho, consisdere que:
+    - Se o funcionário possuir mais de 2 anos de empresa, ele recebe um bônus de 15% sobre o salário bruto
+    - Se o funcionário possuir mais de 4 anos de empresa, ele recebe um bônus de 25% sobre o salário bruto
+    - Se o funcionário possuir mais de 6 anos de empresa, ele recebe um bônus de 40% sobre o salário bruto
+    */
+    //Entrada
+    const cargoOcupado = prompt(`Qual o cargo ocupado na empresa: G-Gerente | S-Supervisor | A-Atendente`).toUpperCase();
+    const tempoTrabalho = Number(prompt(`Qual o tempo de trabalho na empresa:`));
+    //Processamento
+    let salario = 0;
+    if (cargoOcupado == "G") {
+        if (tempoTrabalho < 2) {
+            salario = 30 * 40 * 4;
+        }
+        else if (tempoTrabalho < 4) {
+            salario = (30 * 40 * 4) * 1.15;
+        }
+        else if (tempoTrabalho < 6) {
+            salario = (30 * 40 * 4) * 1.25;
+        }
+        else {
+            salario = (30 * 40 * 4) * 1.4;
+        }
+    }
+    else if (cargoOcupado == "S") {
+        if (tempoTrabalho < 2) {
+            salario = 22 * 40 * 4;
+        }
+        else if (tempoTrabalho < 4) {
+            salario = (22 * 40 * 4) * 1.15;
+        }
+        else if (tempoTrabalho < 6) {
+            salario = (22 * 40 * 4) * 1.25;
+        }
+        else {
+            salario = (22 * 40 * 4) * 1.4;
+        }
+    }
+    else if (cargoOcupado == "A") {
+        if (tempoTrabalho < 2) {
+            salario = 15 * 40 * 4;
+        }
+        else if (tempoTrabalho < 4) {
+            salario = (15 * 40 * 4) * 1.15;
+        }
+        else if (tempoTrabalho < 6) {
+            salario = (15 * 40 * 4) * 1.25;
+        }
+        else {
+            salario = (15 * 40 * 4) * 1.4;
+        }
+    }
+    //Saída
+    alert(`O salário do funcionário será de R$ ${salario.toFixed(2).replace(".", ",")}.`);
+</script>
