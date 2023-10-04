@@ -1,0 +1,41 @@
+<script>
+    /*
+    //PROBLEMA
+    Faça um script que peça um número e informe se o número é inteiro ou decimal.
+    Dica: utilize uma função de arredondamento.
+    */
+
+    //ENTRADA
+    let n = parseFloat(prompt("Digite um número: "));
+
+    //PROCESSAMENTO
+    if (n == Math.round(n)) {
+        alert("O número " + n + " é inteiro.");
+    }
+    else {
+        alert("O número " + n + " é decimal.");
+    }
+
+    /*
+    Ou, usando a função Number.isInteger():
+    if (Number.isInteger(n)) {
+        alert("O número " + n + " é inteiro.");
+    }
+    else {
+        alert("O número " + n + " é decimal.");
+    }
+
+
+    Ou, usando o % 1
+    if (n % 1 == 0) {
+        alert("O número " + n + " é inteiro.");
+    }
+    else {
+        alert("O número " + n + " é decimal.");
+    }
+    */
+    
+    //SAÍDA
+
+
+</script>

@@ -1,0 +1,19 @@
+<script>
+    /*
+    //PROBLEMA
+    Faça um script que pede dois inteiros e armazene eles em duas variáveis.
+    Em seguida, troque o valor das variáveis, invertendo e exibindo o antes e o depois em uma janela de alert.
+    */
+
+    //ENTRADA
+    let n1 = parseInt(prompt("Digite um número inteiro: "));
+    let n2 = parseInt(prompt("Digite outro número inteiro: "));
+
+    //PROCESSAMENTO
+    let aux = n1;
+    n1 = n2;
+    n2 = aux;
+
+    //SAÍDA
+    alert("Antes: " + n2 + " e " + n1 + "\nDepois: " + n1 + " e " + n2);    
+</script>

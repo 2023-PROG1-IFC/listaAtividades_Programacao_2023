@@ -1,0 +1,20 @@
+<meta charset="UTF-8" />
+<script>
+    // Recebe o preço do produto e calcula o aumento do preço, baseado no seguinte critério:
+        //- até 280(inclusive): aumento de 20 %
+        //- até 700(inclusive): aumento de 15 %
+        //- até 1500(inclusive): aumento de 10 %
+        //- acima de 1500: aumento de 5 %
+    
+    // Entrada
+    let preco = parseFloat(prompt("Digite o preço do produto: "));
+    
+    // Processamento
+    if (preco <= 280) preco = preco * 1.2;
+    else if (preco <= 700) preco = preco * 1.15;
+    else if (preco <= 1500) preco = preco * 1.1;
+    else preco = preco * 1.05;
+    
+    // Saída
+    alert("Preço com aumento: R$ " + preco.toFixed(2).replace(".", ","));
+</script>

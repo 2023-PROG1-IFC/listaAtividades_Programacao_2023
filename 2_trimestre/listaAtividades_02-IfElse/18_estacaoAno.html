@@ -1,0 +1,31 @@
+<script>
+    /*
+    //PROBLEMA
+    Faça um script que pergunte para a pessoa em qual hemisfério ela está e qual o mês atual.
+    De acordo com as respostas, informe qual a estação do ano correspondente.
+    */
+
+    //ENTRADA
+    let hemisferio = prompt("Em qual hemisfério você está? Digite N-norte ou S-sul: ").trim().toUpperCase();
+    let mes = parseInt(prompt("Qual o mês atual? Digite um número de 1 a 12: "));
+
+    //PROCESSAMENTO
+    let estacao = "";
+    if (hemisferio == "N") {
+        if (mes == 1 || mes == 2 || mes == 3) estacao = "Inverno";
+        else if (mes == 4 || mes == 5 || mes == 6) estacao = "Primavera";
+        else if (mes == 7 || mes == 8 || mes == 9) estacao = "Verão";
+        else if (mes == 10 || mes == 11 || mes == 12) estacao = "Outono";
+        else alert("Mês inválido.");
+    }
+    else if (hemisferio == "S") {
+        if (mes == 1 || mes == 2 || mes == 3) estacao = "Verão";
+        else if (mes == 4 || mes == 5 || mes == 6) estacao = "Outono";
+        else if (mes == 7 || mes == 8 || mes == 9) estacao = "Interno";
+        else if (mes == 10 || mes == 11 || mes == 12) estacao = "Primavera";
+        else alert("Mês inválido.");
+    }
+
+    //SAÍDA
+    alert(`Você está no hemisfério ${hemisferio} e o mês atual é ${mes}. Portanto, a estação do ano é ${estacao}.`);
+</script>

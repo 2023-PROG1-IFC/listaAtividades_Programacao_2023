@@ -1,0 +1,31 @@
+<meta charset="UTF-8" />
+<script>
+    // Problema: Destino turístico
+    /*
+    Peça para o usuário informar o preço do transporte aéreo para dois destinos de viagem (São Paulo, Rio de Janeiro).
+    
+    Peça também para informar o preço do hotel para os dois destinos (São Paulo, Rio de Janeiro) e quantos dias pretende ficar no destino.
+    
+    Calcule o custo final para cada um e apresente a melhor decisão, considerando que o destino pretendido será o com custo final mais baixo. 
+    
+    Apresente o destino final e o custo final da viagem para o destino.
+    */
+
+    // Entrada
+    const destinoSP = Number(prompt(`Informe o preço do transporte aéreo para São Paulo:`).trim().replace(",", "."));
+    const destinoRJ = Number(prompt(`Informe o preço do transporte aéreo para Rio de Janeiro:`).trim().replace(",", "."));
+    const hotelSP = Number(prompt(`Informe o preço do hotel para São Paulo:`).trim().replace(",", "."));
+    const hotelRJ = Number(prompt(`Informe o preço do hotel para Rio de Janeiro:`).trim().replace(",", "."));
+    const dias = Number(prompt(`Informe a quantidade de dias que pretende ficar no destino:`).trim().replace(",", "."));
+
+    // Processamento
+    const custoSP = destinoSP + (hotelSP * dias);
+    const custoRJ = destinoRJ + (hotelRJ * dias);
+
+    // Saída
+    if (custoSP < custoRJ) {
+        document.write(`O destino escolhido é São Paulo e o custo final da viagem será de R$ ${custoSP.toFixed(2).replace(".", ",")}`);
+    } else {
+        document.write(`O destino escolhido é Rio de Janeiro e o custo final da viagem será de R$ ${custoRJ.toFixed(2).replace(".", ",")}`);
+    }
+</script>

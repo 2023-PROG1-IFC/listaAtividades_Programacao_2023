@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+<script>
+    //Problema: Aumento de Preço
+    //Recebe o preço do produto e calcula o aumento do preço, baseado no seguinte critério:
+    //- até 280(inclusive): aumento de 20 %
+    //- até 700(inclusive): aumento de 15 %
+    //- até 1500(inclusive): aumento de 10 %
+    //- acima de 1500: aumento de 5 %
+
+    //Entrada
+    const preco = Number(prompt("Informe o preço do produto:").trim().replace(",", "."));
+
+    //Processamento
+    let acrescimo = (preco <= 280) ? preco * 20 / 100
+        : (preco <= 700) ? preco * 15 / 100
+            : (preco <= 1500) ? preco * 10 / 100
+                : preco * 5 / 100;
+
+    //Saída
+    document.write("O acréscimo será de R$ " + acrescimo.toFixed(2).replace(".", ",") + ".");
+</script>

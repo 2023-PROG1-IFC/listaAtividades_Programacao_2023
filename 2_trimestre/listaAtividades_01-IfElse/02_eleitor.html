@@ -1,0 +1,32 @@
+<script>
+    //Problema: Eleitor
+    //Peça para o usuário informar a sua idade e diga, ao final do programa, se ele pode ou não votar.
+
+    //ENTRADA
+    const idade = parseInt(prompt("Informe a sua idade: "));
+
+    //PROCESSAMENTO
+    if (idade >= 16 && idade < 18) {
+
+        alert(`Você tem ${idade} anos e pode votar, mas não é obrigado.`);
+
+    }
+    else if (idade >= 18 && idade <= 70) {
+
+        alert(`Você tem ${idade} anos e é obrigado a votar.`);
+
+    }
+    else if (idade > 70) {
+
+        alert(`Você tem ${idade} anos e pode votar, mas não é obrigado.`);
+
+    }
+    else {
+
+        alert(`Você tem ${idade} anos e não pode votar.`);
+
+    }
+
+    //SAÍDA
+
+</script>
