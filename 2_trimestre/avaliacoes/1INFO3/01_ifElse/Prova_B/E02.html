@@ -1,0 +1,27 @@
+<script>
+    /*
+    Problema: Despesas com o veículo
+    Peça para o usuário informar o seu salário bruto mensal. Também peça para ele informar os gastos que possui com o seu veículo pessoal, tais como Combustível (mensal), Seguro (mensal), IPVA (anual - dividir por 12) e licenciamento (anual - dividir por 12).
+    Calcule se as despesas com o veículo ultrapassam 30% do salário bruto mensal. Se ultrapassar, informe que o usuário está gastando muito com o veículo e é preciso revê-las, além de informar o custo mensal total que ele possui com o veículo.
+    Caso contrário, informe que as despesas com o veículo estão dentro do previsto e apresente o custo mensal total que ele possui com o veículo.
+    */
+
+    //Entrada
+    const salarioBruto = Number(prompt(`Informe o salário bruto mensal:`).replace(",", "."));
+    const combustivel = Number(prompt(`Gasto mensal em combustível:`).replace(",", "."));
+    const seguro = Number(prompt(`Gasto mensal em seguro:`).replace(",", "."));
+    const IPVA = Number(prompt(`Gasto anual com IPVA:`).replace(",", "."));
+    const licenciamento = Number(prompt(`Gasto anual com licenciamento:`).replace(",", "."));
+
+    //Processamento
+    const totalMensal = combustivel + seguro + (IPVA / 12) + (licenciamento / 12);
+    if (totalMensal > salarioBruto * 0.3) {
+        alert(`Você está gastando muito com o veículo! Custo mensal R$ ${totalMensal.toFixed(2).replace(".", ",")}`);
+    }
+    else {
+        alert(`As despesas com o veículo estão dentro do previsto. Custo mensal R$ ${totalMensal.toFixed(2).replace(".", ",")}`);
+    }
+
+    //Saída
+
+</script>

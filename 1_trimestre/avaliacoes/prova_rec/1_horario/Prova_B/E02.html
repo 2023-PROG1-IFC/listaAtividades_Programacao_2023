@@ -1,0 +1,16 @@
+<meta charset="utf-8" />
+<script>
+    // Considere que o preço final de um computador é a soma do custo de fábrica, o imposto de importação (30%) e porcentagem da loja (45%), ambos aplicados sobre o custo de fábrica.
+    // Faça um script que leia o custo de fábrica do computador e calcule os custos adicionais, apresentando o custo final do computador ao comprador.
+
+    //ENTRADA
+    const custoFabrica = parseFloat(prompt("Informe o custo de fábrica do computador: "));
+    
+    //PROCESSAMENTO
+    const impostoImportacao = custoFabrica * 0.3;
+    const porcentagemLoja = custoFabrica * 0.45;
+    const precoFinal = custoFabrica + impostoImportacao + porcentagemLoja;
+
+    //SAÍDA
+    document.write(`O custo final do computador é de R$ ${precoFinal.toFixed(2).replace(".", ",")}`);
+</script>

@@ -1,16 +1,48 @@
 <script>
     //PROBLEMA: Viajar para algum lugar
     //Peça para o usuário informar para qual estado deseja realizar a viagem. (Rio Grande do Sul-RS ou Minas Gerais-MG). Peça também para informar quantos dias ficará em viagem. O usuário também deverá informar "quantos dinheiros" (R$) possui para gastar na viagem.
-    
+
+
     //Considere que o custo diário de viagem para "RS" será de R$ 180,00 (180) e o custo diário de viagem para "MG" será de R$ 210,00 (210).
-    
+
     //Calcule se o usuário possui dinheiro suficiente para realizar a viagem para o destino que pretende. Se o usuário puder viajar, o programa apresentará a mensagem "Boa viagem" e quantos dias poderá ficar no destino, além de qual será o custo da viagem. Caso não possa viajar o programa apresentará a mensagem "Sem Férias" e também apresentará "quantos dinheiros" (R$) estão faltando para realizar a viagem.
 
     //ENTRADA
-    const estado = prompt("Informe o estado para onde deseja viajar (RS ou MG): ");
+    const lugar = prompt(`Para onde deseja viajar? RS-Rio Grande do Sul | MG-Minas Gerais`).trim().toUpperCase();
+    const dias = Number(prompt(`Quantos dias você pretende ficar no destino?`));
+    const valor = Number(prompt(`Quantos R$ você poderá gastar na viagem?`).replace(",", "."));
 
     //PROCESSAMENTO
+    const RS = 180;
+    const MG = 210;
+    const diasPossiveisM = Math.floor(valor / MG);
+    const diasPossiveisRS = Math.floor(valor / RS);
 
+    if (lugar == "RS") {
+        if (RS > valor) {
+            alert(`Você não poderá viajar nem um único dia!`);
+        }
+        else if (dias <= diasPossiveisRS) {
+            alert(`Boa viagem! Você ficará ${dias} dias em RS, mas poderia ficar ${diasPossiveisRS} dias.`);
+        }
+        else if (dias > diasPossiveisRS) {
+            alert(`Você não poderá viajar ${dias} dias, apenas ${diasPossiveisRS} dias.`);
+        }
+    }
+    else if (lugar == "MG") {
+        if (MG > valor) {
+            alert(`Você não poderá viajar nem um único dia!`);
+        }
+        else if (dias <= diasPossiveisM) {
+            alert(`Boa viagem!`);
+        }
+        else if (dias > diasPossiveisM) {
+            alert(`Você não poderá viajar ${dias} dias, apenas ${diasPossiveisM} dias.`);
+        }
+    }
+    else {
+        alert(`Informação Inválida!`);
+    }
 
     //SAÍDA
 

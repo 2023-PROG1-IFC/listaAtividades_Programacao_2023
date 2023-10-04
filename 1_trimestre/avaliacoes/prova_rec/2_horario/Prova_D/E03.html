@@ -1,0 +1,16 @@
+<meta charset="utf-8" />
+<script>
+    // Considere que o preço final de uma camisa é a soma do custo de fábrica, o imposto estadual (20%) e margem do vendedor (35%), ambos aplicados sobre o custo de fábrica.
+    // Faça um script que leia o custo de fábrica da camisa e calcule os custos adicionais, apresentando o custo final da camisa ao comprador.
+
+    //ENTRADA
+    const custoFabrica = parseFloat(prompt("Informe o custo de fábrica da camisa: "));
+    
+    //PROCESSAMENTO
+    const impostoEstadual = custoFabrica * 0.2;
+    const margemVendedor = custoFabrica * 0.35;
+    const precoFinal = custoFabrica + impostoEstadual + margemVendedor;
+
+    //SAÍDA
+    document.write(`O custo final da camisa é de R$ ${precoFinal.toFixed(2).replace(".", ",")}`);
+</script>

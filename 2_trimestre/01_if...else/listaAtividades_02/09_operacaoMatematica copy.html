@@ -1,0 +1,25 @@
+<script>
+    const n1 = Number(prompt('informe um número').replace(",", ".").trim());
+    const n2 = Number(prompt('informe outro número').replace(",", ".").trim());
+    const operacao = prompt('escolha a operação desejada (+, -, * ou /)');
+    var mensagem = "o resultado da operação é ";
+    let resultado = 0;
+    if (n1 == Number && n2 == Number) {
+        if (operacao === "+") resultado = n1 + n2;
+        else if (operacao === "-") resultado = n1 - n2;
+        else if (operacao === "*") resultado = n1 * n2;
+        else if (operacao === "/") resultado = n1 / n2;
+        else alert(`valores inválidos`);
+
+        var information = "";
+        if (Number(resultado % 2 === 0)) information += ", esse Número é par";
+        else information += ", esse número é ímpar";
+        if (resultado < 0) information += ", negativo e";
+        else if (resultado > 0) information += ", positivo e";
+        else information += ", neutro e";
+        if (Number.isInteger(resultado)) information += " inteiro.";
+        else information += " decimal.";
+        alert(`${resultado}${information}`)
+    }
+    else { alert("valores inválidos") }
+</script>

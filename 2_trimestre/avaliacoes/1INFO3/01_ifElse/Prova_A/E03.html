@@ -1,0 +1,27 @@
+<script>
+    /*
+    Problema: Contas do Mês
+    Peça para o usuário informar as suas despesas mensais com água, luz, telefone e internet. Também peça para o usuário informar o seu salário bruto mensal.
+    Calcule se as despesas mensais ultrapassam 40% do salário bruto mensal. Se ultrapassar, informe que o usuário está gastando muito com contas e é preciso revê-las, além de nformar o valor que sobrou do salário bruto mensal.
+    Caso contrário, informe que o usuário está com as economias em dia e apresente o valor que sobrou.
+    */
+
+    //Entrada
+    const agua = Number(prompt(`Informe o gasto mensal com água:`).replace(",", "."));
+    const luz = Number(prompt(`Informe o gasto mensal com energia elétrica:`).replace(",", "."));
+    const fone = Number(prompt(`Informe o gasto mensal com telefone:`).replace(",", "."));
+    const net = Number(prompt(`Informe o gasto mensal com internet:`).replace(",", "."));
+    const salarioBruto = Number(prompt(`Informe o salário bruto mensal:`).replace(",", "."));
+
+    //Processamento
+    const totalDespesas = agua + luz + net + fone;
+    if (totalDespesas > salarioBruto * 0.4) {
+        alert(`Você está gastando muito! Deve rever suas despesas. Sobrará R$ ${(salarioBruto - totalDespesas).toFixed(2).replace(".", ",")}.`);
+    }
+    else {
+        alert(`Você está com as economias em dia. Sobrará R$ ${(salarioBruto - totalDespesas).toFixed(2).replace(".", ",")}.`);
+    }
+
+    //Saída
+
+</script>

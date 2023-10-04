@@ -1,0 +1,24 @@
+<script>
+    //Problema: Maioridade
+    //Peça para o usuário informar o seu ano de nascimento e calcule se ele já atingiu a maioridade. Apresente o resultado ao final do programa.
+
+    //ENTRADA
+    const anoNascimento = Number(prompt(`Informe o ano de nascimento:`));
+
+    //PROCESSAMENTO
+    // const anoAtual = new Date().getFullYear();
+    // const data = new Date();
+    // const anoAtual = data.getFullYear();
+    // if (anoNascimento <= 2005) {
+    // if (anoAtual - 18 >= anoNascimento) {
+    // if (anoAtual - anoNascimento >= 18) {
+    if (new Date().getFullYear() - anoNascimento >= 18) {
+        alert(`Você atingiu a maioridade!`);
+    }
+    else {
+        alert(`Você ainda não atingiu a maioridade!`);
+    }
+
+    //SAÍDA
+
+</script>

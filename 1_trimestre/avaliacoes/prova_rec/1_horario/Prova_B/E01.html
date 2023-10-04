@@ -1,0 +1,15 @@
+<meta charset="utf-8" />
+<script>
+    // Você foi encarregado de realizar uma pesquisa sobre acesso a internet. A sua pesquisa deverá apresentar o percentual de funcionários da empresa que possuem internet em casa. Para isso, elabore um algoritmo que leia o número total de funcionários da empresa e o número de funcionários que possuem acesso a internet, por fim, com base nestes dados, escreva o percentual de funcionários com acesso a internet.
+    // Por exemplo, em uma empresa com 200 funcionários, apenas 40 funcionários possuem acesso à Internet, o que equivale a 20% destes 200 alunos.
+
+    //ENTRADA
+    const totalFuncionarios = parseInt(prompt("Informe o total de funcionários da empresa: "));
+    const funcionariosComInternet = parseInt(prompt("Informe o total de funcionários com acesso à internet: "));
+
+    //PROCESSAMENTO
+    const percentual = (funcionariosComInternet / totalFuncionarios) * 100;
+
+    //SAÍDA
+    document.write(`O percentual de funcionários com acesso à internet é de ${percentual.toFixed(2).replace(".", ",")}%`);
+</script>
