@@ -7,11 +7,17 @@
     */
 
     //Entrada
-
+    let bebidas = ["Cerveja", "Vinho", "Suco Natural", "Tequila", "Água", "Refrigerante", "Vodka"];
+    let semAlcool = [];
 
     //Processamento
-
+    for (const item of bebidas) {
+        const possui = prompt(`A bebida ${item} possui álcool? S-Sim | N-Não`).trim().toUpperCase();
+        if (possui == "N") {
+            semAlcool.push(item);
+        }
+    }
 
     //Saída
-
+    document.write(`As bebidas que não possuem álcool são: ${semAlcool.join(", ")}.`);
 </script>
