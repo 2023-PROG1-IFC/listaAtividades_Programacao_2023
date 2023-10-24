@@ -6,15 +6,22 @@
     */
 
     //ENTRADA
-
-
-    //ENTRADA
-
+    var num = 0;
+    var somaPar = 0;
+    var somaImpar = 0;
     
     //PROCESSAMENTO
-    
+    for (var i = 1; i <= 100; i++) {
+        num = i;
+        if (num % 2 == 0) {
+            somaPar = somaPar + num;
+        } else {
+            somaImpar = somaImpar + num;
+        }
+    }    
     
     //SAÍDA
-    
+    document.write("Soma dos números pares: " + somaPar + "<br>");
+    document.write("Soma dos números ímpares: " + somaImpar + "<br>");    
 
 </script>

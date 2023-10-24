@@ -8,12 +8,18 @@
     */
 
     //ENTRADA
+    let fibonacci = [0, 1];
+    const quantidade = Number(prompt(`Quantos números deseja adicionar na sequência de Fibonacci?`));
 
-    
     //PROCESSAMENTO
-    
-    
-    //SAÍDA
-    
+    for (let contador = 1; contador <= quantidade; contador++) {
+        // let ultimo = fibonacci[fibonacci.length - 1];
+        // let penultimo = fibonacci[fibonacci.length - 2];
+        // let soma = ultimo + penultimo;
+        // fibonacci.push(soma);
+        fibonacci.push(fibonacci[fibonacci.length - 1] + fibonacci[fibonacci.length - 2]);
+    }
 
+    //SAÍDA
+    document.write(fibonacci.join(", "));
 </script>

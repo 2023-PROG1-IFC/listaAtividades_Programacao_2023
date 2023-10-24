@@ -3,16 +3,31 @@
     /*
     Desenvolva um programa que considere que o material radioativo perca metade da sua massa a cada 60 segundos.
     Peça para o usuário qual a massa inicial e calcule quantas horas e minutos são necessários para que esse material tenha massa menor do que 1 grama.
-    Apresente, ao fim do programa, a massa inicial, massa final e o necessário para que atinja a massa determinada.
+    Apresente, ao fim do programa, a massa inicial, massa final e o tempo necessário para que atinja a massa determinada.
     */
 
     //ENTRADA
+    const massaInicial = Number(prompt(`Qual a massa do material radioativo?`).replace(",", "."));
 
-    
     //PROCESSAMENTO
-    
-    
-    //SAÍDA
-    
+    let tempo = 0;
+    let massaFinal = massaInicial;
+    for (tempo = 0; massaFinal >= 1; tempo++) {
+        massaFinal = massaFinal / 2;
+    }
+    const horas = tempo / 60;
+    const minutos = tempo % 60;
 
+    //SAÍDA
+    document.write(`A massa inicial era de ${massaInicial} gramas.<br>A massa final foi de ${massaFinal} gramas.<br>O tempo necessário para ser menor do que 1 grama é de ${tempo} minutos.`);
+    if (horas > 0) {
+        document.write(`São necessários ${horas} horas `);
+        if (minutos > 0) {
+            document.write(`e ${minutos} minutos para a redução da massa a menos de 1 grama.`);
+        }
+    }
+    else {
+        document.write(`São necessários ${minutos} minutos para a redução da massa a menos de 1 grama.`);
+    }
+    
 </script>

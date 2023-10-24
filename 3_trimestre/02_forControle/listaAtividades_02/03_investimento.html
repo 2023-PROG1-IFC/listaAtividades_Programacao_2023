@@ -8,10 +8,25 @@
     */
 
     //ENTRADA
-
+    let investimento = 0;
+    let rendimentoTotal = 0;
     
     //PROCESSAMENTO
-    
+    for (let mes = 1; mes <= 96; mes++) {
+        investimento = investimento + 100;
+        const rendimentoMensal = investimento * 0.018;
+        rendimentoTotal = rendimentoTotal + rendimentoMensal;
+        investimento = investimento + rendimentoMensal;
+        if (mes == 24) {
+            document.write(`No 24º mês, o investimento será de R$ ${investimento.toFixed(2)}. Terá rendido R$ ${rendimentoTotal.toFixed(2)}<br>`);
+        }
+        if (mes == 48) {
+            document.write(`No 48º mês, o investimento será de R$ ${investimento.toFixed(2)}. Terá rendido R$ ${rendimentoTotal.toFixed(2)}<br>`);
+        }
+        if (mes == 96) {
+            document.write(`No 96º mês, o investimento será de R$ ${investimento.toFixed(2)}. Terá rendido R$ ${rendimentoTotal.toFixed(2)}<br>`);
+        }
+    }
     
     //SAÍDA
     
